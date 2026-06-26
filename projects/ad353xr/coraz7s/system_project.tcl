@@ -18,3 +18,4 @@ adi_project_files ad353xr_coraz7s [list \
 set_property PROCESSING_ORDER LATE [get_files system_constr.xdc]
 
 adi_project_run ad353xr_coraz7s
+
