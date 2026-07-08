@@ -28,3 +28,4 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dac_resetb
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dac_ldacb
 
 execute_flow -compile
+#test
