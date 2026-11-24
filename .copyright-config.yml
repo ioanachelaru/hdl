@@ -1,0 +1,20 @@
+# Per-file license rules for the copyright-license-check action.
+# First matching rule wins. Reference texts live in .github/licenses/.
+rules:
+  # JESD204 cores: full ADIJESD204 text + short identifier only (no SPDX id)
+  - match: ["*jesd*.v", "*jesd*.sv", "*jesd*.vhd"]
+    header-text: .github/licenses/adijesd204.txt
+    identifier: "Short identifier: ADIJESD204"
+
+  # Other Verilog/SystemVerilog/VHDL: 2-clause dual license (GPL2 or ADIBSD)
+  - match: ["*.v", "*.sv", "*.vhd"]
+    header-text: .github/licenses/verilog-dual.txt
+
+  # Scripts and constraints: ADIBSD only, full text + short identifier
+  - match: ["*.tcl", "*.ttcl", "*.pl", "*.xdc", "*.sdc"]
+    header-text: .github/licenses/adibsd.txt
+    identifier: "Short identifier: ADIBSD"
+
+  # Makefiles: SPDX short identifier only
+  - match: ["Makefile", "*.mk"]
+    identifier: "SPDX short identifier: BSD-1-Clause"
