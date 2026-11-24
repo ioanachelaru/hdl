@@ -1,0 +1,49 @@
+###############################################################################
+## Copyright (C) 2026 Analog Devices, Inc. All rights reserved.
+## Short identifier: ADIBSD
+##
+## Checks copyright years and license headers of HDL sources using the
+## shared copyright-license-check action. Rules: .copyright-config.yml
+###############################################################################
+
+name: Copyright and license check
+
+on:
+  # Manual whole-repo scan: report only, never fails the run
+  workflow_dispatch:
+    inputs:
+      scan-path:
+        description: 'Directory to scan (default: whole repository)'
+        required: false
+        default: '.'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'library/**'
+      - 'projects/**'
+      - 'scripts/**'
+      - 'Makefile'
+      - '.copyright-config.yml'
+      - '.github/licenses/**'
+
+jobs:
+  copyright_license_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v6.0.0
+        with:
+          fetch-depth: 0
+
+      - name: Check copyright and license headers
+        uses: analogdevicesinc/shared-actions/copyright-license-check@hdl-customisations
+        with:
+          file-extensions: 'v,sv,vhd,tcl,ttcl,pl,xdc,sdc,mk,Makefile'
+          license-pattern: ''
+          copyright-holder: 'Analog Devices'
+          ignore-trivial-changes: 'true'
+          # workflow_dispatch: scan everything and only report
+          full-scan: ${{ github.event_name == 'workflow_dispatch' }}
+          fail-on-missing: ${{ github.event_name != 'workflow_dispatch' }}
+          scan-path: ${{ inputs.scan-path || '.' }}

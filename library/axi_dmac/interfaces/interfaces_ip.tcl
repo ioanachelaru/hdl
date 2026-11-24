@@ -15,7 +15,6 @@
 ##       from this software without specific prior written permission.
 ##     - The use of this software may or may not infringe the patent rights
 ##       of one or more patent holders. This license does not release you
-##       from the requirement that you obtain separate licenses from these
 ##       patent holders to use this software.
 ##     - Use of the software either in source or binary form, must be run
 ##       on or directly connected to an Analog Devices Inc. component.

@@ -1,6 +1,5 @@
 ####################################################################################
 ## Copyright (c) 2018 - 2026 Analog Devices, Inc.
-## SPDX short identifier: BSD-1-Clause
 ####################################################################################
 
 # Assumes this file is in library/scripts/library.mk
