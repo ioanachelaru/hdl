@@ -1,7 +1,6 @@
 // ***************************************************************************
 // ***************************************************************************
 // Copyright (C) 2016-2018, 2020-2022, 2026 Analog Devices, Inc. All rights reserved.
-// Short identifier: ADIJESD204
 //
 // The ADI JESD204 Core is released under the following license, which is
 // different than all other HDL cores in this repository.

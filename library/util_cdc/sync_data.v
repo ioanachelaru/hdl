@@ -17,7 +17,7 @@
 // Redistribution and use of source or resulting binaries, with or without modification
 // of this file, are permitted under one of the following two license terms:
 //
-//   1. The GNU General Public License version 2 as published by the
+//   1. The MIT license as published by the
 //      Free Software Foundation, which can be found in the top level directory
 //      of this repository (LICENSE_GPL2), and also online at:
 //      <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>
